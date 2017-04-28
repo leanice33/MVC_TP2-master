@@ -1,0 +1,7 @@
+﻿@model IEnumerable<DAL_Demo.Models.Post>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_Post", item)
+}
+

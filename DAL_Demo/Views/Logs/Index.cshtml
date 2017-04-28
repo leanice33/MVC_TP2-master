@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DAL_Demo.Models.Log>
+
+@{
+    ViewBag.Title = "Index";
+    var previousDate = new DateTime(0);
+    bool admin = ((DAL_Demo.Models.User)Session["CurrentUser"]).UserType == DAL_Demo.Models.UserType.admin;
+    bool skipFirst = true;
+}
+<h3> Journal de connections </h3>
+<table class="table">
+    <tr>
+        @if (admin){ <th>Usager</th> }
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Durée</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (!skipFirst)
+        {          
+            var showDate = false;
+            var dateString = item.Login.ToShortDateString();
+            if (dateString != previousDate.ToShortDateString())
+            {
+                showDate = true;
+                previousDate = item.Login;
+            }
+            <tr>
+                @if (admin) { <td>@DB.Users.Get(item.UserId).GetFullName() </td> }
+                <td>@if (showDate) { <span>@item.Login.ToShortDateString()</span> } </td>
+                <td>@item.Login.ToLongTimeString()</td>
+                <td>@(item.Logout - item.Login)</td>
+            </tr>
+        }
+        else {  skipFirst = false; }
+    }
+</table>

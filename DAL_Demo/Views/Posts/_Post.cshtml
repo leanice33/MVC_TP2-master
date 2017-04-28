@@ -1,0 +1,32 @@
+﻿@model DAL_Demo.Models.Post
+<style>
+    .PostPanel {
+        border-radius: 6px;
+        border: 1px solid LightGray;
+        margin: auto;
+        width: 60%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="PostPanel">
+    <table style="width:100%">
+        <tr>
+            <td style="width:30%;color:deepskyblue">@Html.DisplayFor(modelItem => Model.CreationDate)</td>
+            <td style="width:60%">@Html.DisplayFor(modelItem => Model.Sender) :</td>
+            <td style="width:5%">
+                <img src="@Url.Content("~/Content/UI_Images/Edit.png")" style="width:16px;" class="EditBtn" id="EditBtn_@Model.Id" />
+            </td>
+            <td style="width:5%">
+                <img src="@Url.Content("~/Content/UI_Images/Delete.png")" style="width:16px;" class="DeleteBtn" id="DeleteBtn_@Model.Id" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"><h4>@Html.DisplayFor(modelItem => Model.Title)</h4></td>
+        </tr>
+    </table>
+
+    <div class="PostContent">
+        @Html.DisplayFor(modelItem => Model.Content)
+    </div>
+</div>

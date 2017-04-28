@@ -1,0 +1,22 @@
+﻿@if (Session["CurrentUser"] != null)
+{
+    var user = (DAL_Demo.Models.User)Session["CurrentUser"];
+    <ul class="nav navbar-nav navbar-right">
+        <li style="color:steelblue">
+            <a href='@Url.Action("Edit", "Accounts", new { id = ((DAL_Demo.Models.User)Session["CurrentUser"]).Id })' style="text-decoration:none">
+                <span class="UserName">@user.GetFullName()</span>
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action("Logout","Accounts")">Se déconnecter</a>
+        </li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("S’inscrire", "Create", "Accounts", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Se connecter", "Login", "Accounts", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+

@@ -1,0 +1,200 @@
+﻿
+@{
+    ViewBag.Title = "Messages";
+}
+<table style="margin:auto;width:60%">
+    <tr>
+        <td><h3>Messages</h3></td>
+        <td style="text-align:right"><button id="NewPostBtn" class="form-control" style="width:100px">Nouveau...</button></td>
+        <td>
+            &nbsp;&nbsp;&nbsp;
+            <label for="PeriodInSeconds">Rafraichir aux</label>
+            <input id="PeriodInSeconds" name="PeriodInSeconds" type="number" style="width:45px; text-align:right; border-radius:6px;" />
+            <b>secondes</b>
+        </td>
+        <td><b>Mise à jour dans <span id="TimeLeft" style="color:deepskyblue"></span> secondes</b></td>
+    </tr>
+</table>
+
+<hr />
+<div id="PostPanel"></div>
+<div id="EditPostDialogPanel"></div>
+<div id="DeletePostDialogPanel" style="display:none">
+    Voulez-vous effacer le message [<span></span>] ?
+</div>
+
+<script>
+
+        $(document).ready(
+            function () {
+                RefreshPostList();
+                $("#NewPostBtn").click(function () { LoadEditPostDialog(0); });
+            })
+
+        function RefreshPostList() {
+            $.ajax({
+                url: "@Url.Action("List","Posts")",
+                type: "GET"
+            }).done(function (partialViewResult) {
+                $("#PostPanel").html(partialViewResult);
+
+                $(".EditBtn").click(function () {
+                    var id = $(this).attr("id").split('_')[1];
+                    LoadEditPostDialog(id);
+                });
+
+                $(".DeleteBtn").click(function () {
+                    var id = $(this).attr("id").split('_')[1];
+                    LoadDeletePostDialog(id);
+                });
+            });
+         }
+
+        function GetForm(id)
+        {
+            var form = $(id + " form");
+            form.removeData('validator');
+            form.removeData('unobtrusiveValidation');
+            $.validator.unobtrusive.parse('form');
+            return form;
+        }
+
+
+        function LoadEditPostDialog(id)
+        {
+            $.ajax({
+                url: "@Url.Action("Edit","Posts")",
+                type: "GET",
+                data: { id: id }
+            }).done(
+                function (partialViewResult) {
+                    $("#EditPostDialogPanel").html(partialViewResult);
+                    $("#EditPostDialogPanel").dialog({
+                        modal: true,
+                        width: 600,
+                        height: 400,
+                        title: (id == 0 ? 'Création de message' : 'Édition de message'),
+                        buttons: [
+                            {
+                                text: (id == 0 ? 'Créer' : 'Modifier'),
+                                class: 'btn-primary',
+                                style: 'width:80px',
+                                click: function ()
+                                {
+                                    var form = GetForm("#EditPostDialogPanel");
+                                    if (form.valid()) {
+                                        $.ajax({
+                                            url: "@Url.Action("Edit","Posts")",
+                                            type: "POST",
+                                            data: form.serialize(),
+                                            success: function (data) {
+                                                if (data.status) {
+                                                    $("#EditPostDialogPanel").dialog('close');
+                                                    RefreshPostList();
+                                                }
+                                            }
+                                        })
+                                    }
+                                }
+                            },
+                            {
+                                text: 'Annuler',
+                                style: 'width:80px',
+                                click: function () {
+                                    $("#EditPostDialogPanel").dialog('close');
+                                }
+                            }
+                        ]
+                    })
+                });
+        }
+         function LoadDeletePostDialog(id)
+        {
+            $.ajax({
+                url: "@Url.Action("Get","Posts")",
+                type: "GET",
+                data: { id: id }
+            }).done(
+                function (post) {
+                    var title = post.Title;
+                    $("#DeletePostDialogPanel span").text(title);
+                    $("#DeletePostDialogPanel").dialog({
+                        modal: true,
+                        width: 600,
+                        height: 200,
+                        title: 'Retrait de message',
+                        buttons: [
+                            {
+                                text: 'Effacer',
+                                class: 'btn-primary',
+                                style: 'width:80px',
+                                click: function ()
+                                {
+                                    $.ajax({
+                                        url: "@Url.Action("Delete","Posts")"+"/"+id,
+                                        type: "GET",
+                                        success: function (data) {
+                                            if (data.status) {
+                                                $("#DeletePostDialogPanel").dialog('close');
+                                                RefreshPostList();
+                                            }
+                                        }
+                                    })
+                                }
+                            },
+                            {
+                                text: 'Annuler',
+                                style: 'width:80px',
+                                click: function () {
+                                    $("#DeletePostDialogPanel").dialog('close');
+                                }
+                            }
+                        ]
+                    })
+                });
+        }
+
+
+        var period = 10000;
+        var secondsLeft = period / 1000;
+        var alertChecker = null;
+        var chrono = null;
+        $(document).ready(
+            function () {
+                SetChecker();
+                $("#PeriodInSeconds").change(
+                    function () {
+                        secondsLeft = $(this).val();
+                        period = secondsLeft * 1000;
+                        SetChecker();
+                        StartChrono();
+                    })
+            }
+        )
+
+        function SetChecker() {
+            $("#PeriodInSeconds").val(secondsLeft);
+            Refresh();
+            if (alertChecker != null) clearInterval(alertChecker);
+            alertChecker = setInterval(Checker, period);
+            StartChrono();
+        }
+        function StartChrono() {
+            if (chrono != null) clearInterval(chrono);
+            chrono = setInterval(Chrono, 1000);
+        }
+        function Chrono() {
+            secondsLeft--;
+            $("#TimeLeft").text(secondsLeft);
+        }
+        function Checker() {
+            Refresh();
+        }
+        function Refresh() {
+            secondsLeft = period / 1000;
+            RefreshPostList();
+        }
+
+</script>
+<h2>Index</h2>
+
