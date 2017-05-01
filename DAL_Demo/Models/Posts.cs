@@ -10,7 +10,7 @@ namespace DAL_Demo.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Envoyeur")]
+        [Display(Name = "Destinataire")]
         [StringLength(50), Required]
         public string Sender { get; set; }
 

@@ -13,7 +13,7 @@
     <table style="width:100%">
         <tr>
             <td style="width:30%;color:deepskyblue">@Html.DisplayFor(modelItem => Model.CreationDate)</td>
-            <td style="width:60%">@Html.DisplayFor(modelItem => Model.Sender) :</td>
+            <td style="width:60%">Destinataire: @Html.DisplayFor(modelItem => Model.Sender) </td>
             <td style="width:5%">
                 <img src="@Url.Content("~/Content/UI_Images/Edit.png")" style="width:16px;" class="EditBtn" id="EditBtn_@Model.Id" />
             </td>
