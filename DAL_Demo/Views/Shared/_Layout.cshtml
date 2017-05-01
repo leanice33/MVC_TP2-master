@@ -54,5 +54,11 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+        // Gestion de conflit entre bootstrap et jquery-ui au niveau du CSS des dialogs
+        // http://stackoverflow.com/questions/17367736/jquery-ui-dialog-missing-close-icon
+        var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+        $.fn.bootstrapBtn = bootstrapButton
+    </script>
 </body>
 </html>

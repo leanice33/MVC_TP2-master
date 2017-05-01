@@ -185,3 +185,195 @@
 185|2017-04-28 13:44:43|[10] DAL.DataBase.BeginTransaction. |
 186|2017-04-28 13:44:43|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
 187|2017-04-28 13:44:43|[10] DAL.DataBase.EndTransaction Commit |
+188|2017-04-30 11:19:18|[5] DAL.DataBase.BeginTransaction. |
+189|2017-04-30 11:19:18|[5] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+190|2017-04-30 11:19:18|[5] DAL.DataBase.EndTransaction Commit |
+191|2017-04-30 11:19:31|[6] DAL.DataBase.BeginTransaction. |
+192|2017-04-30 11:19:31|[6] DAL.RecordsDB.NonQuerySQL|INSERT INTO Users(UserType, Name, Password, FirstName, LastName) VALUES (1, 'test1', 'pS82DM!fQtQFA9eLHrspmefqBaIOQa6A==', 'Liam', 'Bigras')
+193|2017-04-30 11:19:31|[6] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Users ORDER BY ID DESC
+194|2017-04-30 11:19:31|[6] DAL.DataBase.EndTransaction Commit |
+195|2017-04-30 11:19:41|[5] DAL.DataBase.BeginTransaction. |
+196|2017-04-30 11:19:41|[5] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+197|2017-04-30 11:19:41|[5] DAL.DataBase.EndTransaction Commit |
+198|2017-04-30 11:19:41|[5] DAL.DataBase.BeginTransaction. |
+199|2017-04-30 11:19:41|[5] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-04-30 11:19:41.000', '2017-04-30 11:19:41.000')
+200|2017-04-30 11:19:41|[5] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+201|2017-04-30 11:19:41|[5] DAL.DataBase.EndTransaction Commit |
+202|2017-04-30 11:19:42|[8] DAL.DataBase.BeginTransaction. |
+203|2017-04-30 11:19:42|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+204|2017-04-30 11:19:42|[8] DAL.DataBase.EndTransaction Commit |
+205|2017-05-01 14:10:14|[7] DAL.DataBase.BeginTransaction. |
+206|2017-05-01 14:10:14|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+207|2017-05-01 14:10:15|[7] DAL.DataBase.EndTransaction Commit |
+208|2017-05-01 14:12:18|[7] DAL.DataBase.BeginTransaction. |
+209|2017-05-01 14:12:18|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+210|2017-05-01 14:12:18|[7] DAL.DataBase.EndTransaction Commit |
+211|2017-05-01 14:12:27|[8] DAL.DataBase.BeginTransaction. |
+212|2017-05-01 14:12:27|[8] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:12:27.000', '2017-05-01 14:12:27.000')
+213|2017-05-01 14:12:27|[8] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+214|2017-05-01 14:12:27|[8] DAL.DataBase.EndTransaction Commit |
+215|2017-05-01 14:12:27|[10] DAL.DataBase.BeginTransaction. |
+216|2017-05-01 14:12:27|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+217|2017-05-01 14:12:27|[10] DAL.DataBase.EndTransaction Commit |
+218|2017-05-01 14:19:56|[8] DAL.DataBase.BeginTransaction. |
+219|2017-05-01 14:19:56|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+220|2017-05-01 14:19:56|[8] DAL.DataBase.EndTransaction Commit |
+221|2017-05-01 14:19:56|[7] DAL.DataBase.BeginTransaction. |
+222|2017-05-01 14:19:56|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+223|2017-05-01 14:19:56|[7] DAL.DataBase.EndTransaction Commit |
+224|2017-05-01 14:20:44|[7] DAL.DataBase.BeginTransaction. |
+225|2017-05-01 14:20:44|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+226|2017-05-01 14:20:44|[7] DAL.DataBase.EndTransaction Commit |
+227|2017-05-01 14:20:44|[7] DAL.DataBase.BeginTransaction. |
+228|2017-05-01 14:20:44|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:20:44.000', '2017-05-01 14:20:44.000')
+229|2017-05-01 14:20:44|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+230|2017-05-01 14:20:44|[7] DAL.DataBase.EndTransaction Commit |
+231|2017-05-01 14:20:44|[10] DAL.DataBase.BeginTransaction. |
+232|2017-05-01 14:20:44|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+233|2017-05-01 14:20:44|[10] DAL.DataBase.EndTransaction Commit |
+234|2017-05-01 14:34:56|[8] DAL.DataBase.BeginTransaction. |
+235|2017-05-01 14:34:56|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+236|2017-05-01 14:34:56|[8] DAL.DataBase.EndTransaction Commit |
+237|2017-05-01 14:34:56|[7] DAL.DataBase.BeginTransaction. |
+238|2017-05-01 14:34:57|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+239|2017-05-01 14:34:57|[7] DAL.DataBase.EndTransaction Commit |
+240|2017-05-01 14:34:59|[5] DAL.DataBase.BeginTransaction. |
+241|2017-05-01 14:34:59|[5] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+242|2017-05-01 14:34:59|[5] DAL.DataBase.EndTransaction Commit |
+243|2017-05-01 14:34:59|[5] DAL.DataBase.BeginTransaction. |
+244|2017-05-01 14:34:59|[5] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:34:59.000', '2017-05-01 14:34:59.000')
+245|2017-05-01 14:34:59|[5] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+246|2017-05-01 14:34:59|[5] DAL.DataBase.EndTransaction Commit |
+247|2017-05-01 14:34:59|[7] DAL.DataBase.BeginTransaction. |
+248|2017-05-01 14:34:59|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+249|2017-05-01 14:34:59|[7] DAL.DataBase.EndTransaction Commit |
+250|2017-05-01 14:39:50|[8] DAL.DataBase.BeginTransaction. |
+251|2017-05-01 14:39:50|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+252|2017-05-01 14:39:50|[8] DAL.DataBase.EndTransaction Commit |
+253|2017-05-01 14:39:50|[7] DAL.DataBase.BeginTransaction. |
+254|2017-05-01 14:39:50|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+255|2017-05-01 14:39:50|[7] DAL.DataBase.EndTransaction Commit |
+256|2017-05-01 14:41:16|[7] DAL.DataBase.BeginTransaction. |
+257|2017-05-01 14:41:16|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+258|2017-05-01 14:41:16|[7] DAL.DataBase.EndTransaction Commit |
+259|2017-05-01 14:41:16|[7] DAL.DataBase.BeginTransaction. |
+260|2017-05-01 14:41:16|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:41:16.000', '2017-05-01 14:41:16.000')
+261|2017-05-01 14:41:16|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+262|2017-05-01 14:41:16|[7] DAL.DataBase.EndTransaction Commit |
+263|2017-05-01 14:41:16|[7] DAL.DataBase.BeginTransaction. |
+264|2017-05-01 14:41:16|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+265|2017-05-01 14:41:16|[7] DAL.DataBase.EndTransaction Commit |
+266|2017-05-01 14:41:20|[11] DAL.DataBase.BeginTransaction. |
+267|2017-05-01 14:41:20|[11] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+268|2017-05-01 14:41:20|[11] DAL.DataBase.EndTransaction Commit |
+269|2017-05-01 14:41:50|[8] DAL.DataBase.BeginTransaction. |
+270|2017-05-01 14:41:50|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+271|2017-05-01 14:41:50|[8] DAL.DataBase.EndTransaction Commit |
+272|2017-05-01 14:41:59|[8] DAL.DataBase.BeginTransaction. |
+273|2017-05-01 14:41:59|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+274|2017-05-01 14:41:59|[8] DAL.DataBase.EndTransaction Commit |
+275|2017-05-01 14:41:59|[8] DAL.DataBase.BeginTransaction. |
+276|2017-05-01 14:41:59|[8] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:41:59.000', '2017-05-01 14:41:59.000')
+277|2017-05-01 14:41:59|[8] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+278|2017-05-01 14:41:59|[8] DAL.DataBase.EndTransaction Commit |
+279|2017-05-01 14:41:59|[10] DAL.DataBase.BeginTransaction. |
+280|2017-05-01 14:41:59|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+281|2017-05-01 14:41:59|[10] DAL.DataBase.EndTransaction Commit |
+282|2017-05-01 14:44:25|[7] DAL.DataBase.BeginTransaction. |
+283|2017-05-01 14:44:25|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+284|2017-05-01 14:44:25|[7] DAL.DataBase.EndTransaction Commit |
+285|2017-05-01 14:44:25|[7] DAL.DataBase.BeginTransaction. |
+286|2017-05-01 14:44:25|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:44:25.000', '2017-05-01 14:44:25.000')
+287|2017-05-01 14:44:25|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+288|2017-05-01 14:44:25|[7] DAL.DataBase.EndTransaction Commit |
+289|2017-05-01 14:44:25|[10] DAL.DataBase.BeginTransaction. |
+290|2017-05-01 14:44:25|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+291|2017-05-01 14:44:25|[10] DAL.DataBase.EndTransaction Commit |
+292|2017-05-01 14:44:28|[8] DAL.DataBase.BeginTransaction. |
+293|2017-05-01 14:44:28|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+294|2017-05-01 14:44:28|[8] DAL.DataBase.EndTransaction Commit |
+295|2017-05-01 14:50:47|[10] DAL.DataBase.BeginTransaction. |
+296|2017-05-01 14:50:48|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+297|2017-05-01 14:50:48|[10] DAL.DataBase.EndTransaction Commit |
+298|2017-05-01 14:50:48|[10] DAL.DataBase.BeginTransaction. |
+299|2017-05-01 14:50:48|[10] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:50:48.000', '2017-05-01 14:50:48.000')
+300|2017-05-01 14:50:48|[10] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+301|2017-05-01 14:50:48|[10] DAL.DataBase.EndTransaction Commit |
+302|2017-05-01 14:50:48|[8] DAL.DataBase.BeginTransaction. |
+303|2017-05-01 14:50:48|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+304|2017-05-01 14:50:48|[8] DAL.DataBase.EndTransaction Commit |
+305|2017-05-01 14:50:51|[10] DAL.DataBase.BeginTransaction. |
+306|2017-05-01 14:50:51|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+307|2017-05-01 14:50:51|[10] DAL.DataBase.EndTransaction Commit |
+308|2017-05-01 14:55:17|[7] DAL.DataBase.BeginTransaction. |
+309|2017-05-01 14:55:17|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+310|2017-05-01 14:55:17|[7] DAL.DataBase.EndTransaction Commit |
+311|2017-05-01 14:55:17|[7] DAL.DataBase.BeginTransaction. |
+312|2017-05-01 14:55:17|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 14:55:17.000', '2017-05-01 14:55:17.000')
+313|2017-05-01 14:55:17|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+314|2017-05-01 14:55:17|[7] DAL.DataBase.EndTransaction Commit |
+315|2017-05-01 14:55:17|[8] DAL.DataBase.BeginTransaction. |
+316|2017-05-01 14:55:17|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+317|2017-05-01 14:55:17|[8] DAL.DataBase.EndTransaction Commit |
+318|2017-05-01 14:55:21|[7] DAL.DataBase.BeginTransaction. |
+319|2017-05-01 14:55:21|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+320|2017-05-01 14:55:21|[7] DAL.DataBase.EndTransaction Commit |
+321|2017-05-01 15:03:21|[7] DAL.DataBase.BeginTransaction. |
+322|2017-05-01 15:03:21|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+323|2017-05-01 15:03:21|[7] DAL.DataBase.EndTransaction Commit |
+324|2017-05-01 15:03:21|[7] DAL.DataBase.BeginTransaction. |
+325|2017-05-01 15:03:21|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 15:03:21.000', '2017-05-01 15:03:21.000')
+326|2017-05-01 15:03:21|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+327|2017-05-01 15:03:21|[7] DAL.DataBase.EndTransaction Commit |
+328|2017-05-01 15:03:21|[10] DAL.DataBase.BeginTransaction. |
+329|2017-05-01 15:03:21|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+330|2017-05-01 15:03:22|[10] DAL.DataBase.EndTransaction Commit |
+331|2017-05-01 15:03:29|[7] DAL.DataBase.BeginTransaction. |
+332|2017-05-01 15:03:29|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+333|2017-05-01 15:03:29|[7] DAL.DataBase.EndTransaction Commit |
+334|2017-05-01 15:06:33|[5] DAL.DataBase.BeginTransaction. |
+335|2017-05-01 15:06:33|[5] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+336|2017-05-01 15:06:33|[5] DAL.DataBase.EndTransaction Commit |
+337|2017-05-01 15:06:33|[5] DAL.DataBase.BeginTransaction. |
+338|2017-05-01 15:06:33|[5] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 15:06:33.000', '2017-05-01 15:06:33.000')
+339|2017-05-01 15:06:33|[5] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+340|2017-05-01 15:06:33|[5] DAL.DataBase.EndTransaction Commit |
+341|2017-05-01 15:06:33|[7] DAL.DataBase.BeginTransaction. |
+342|2017-05-01 15:06:33|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+343|2017-05-01 15:06:33|[7] DAL.DataBase.EndTransaction Commit |
+344|2017-05-01 15:06:39|[7] DAL.DataBase.BeginTransaction. |
+345|2017-05-01 15:06:39|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+346|2017-05-01 15:06:39|[7] DAL.DataBase.EndTransaction Commit |
+347|2017-05-01 15:08:32|[7] DAL.DataBase.BeginTransaction. |
+348|2017-05-01 15:08:32|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM Users
+349|2017-05-01 15:08:32|[7] DAL.DataBase.EndTransaction Commit |
+350|2017-05-01 15:08:32|[7] DAL.DataBase.BeginTransaction. |
+351|2017-05-01 15:08:32|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Logs(UserId, Login, Logout) VALUES (5, '2017-05-01 15:08:32.000', '2017-05-01 15:08:32.000')
+352|2017-05-01 15:08:32|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Logs ORDER BY ID DESC
+353|2017-05-01 15:08:32|[7] DAL.DataBase.EndTransaction Commit |
+354|2017-05-01 15:08:33|[8] DAL.DataBase.BeginTransaction. |
+355|2017-05-01 15:08:33|[8] DAL.RecordsDB.QuerySQL |SELECT * FROM Logs ORDER BY Login DESC
+356|2017-05-01 15:08:33|[8] DAL.DataBase.EndTransaction Commit |
+357|2017-05-01 15:08:37|[7] DAL.DataBase.BeginTransaction. |
+358|2017-05-01 15:08:37|[7] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+359|2017-05-01 15:08:38|[7] DAL.DataBase.EndTransaction Commit |
+360|2017-05-01 15:08:54|[7] DAL.DataBase.BeginTransaction. |
+361|2017-05-01 15:08:54|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Posts(Sender, CreationDate, Title, Content) VALUES ('STeve', '2017-05-01 15:08:38.000', 'First', 'Im the first to post! U guys suck! haha')
+362|2017-05-01 15:08:54|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Posts ORDER BY ID DESC
+363|2017-05-01 15:08:54|[7] DAL.DataBase.EndTransaction Commit |
+364|2017-05-01 15:08:54|[11] DAL.DataBase.BeginTransaction. |
+365|2017-05-01 15:08:54|[11] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+366|2017-05-01 15:08:54|[11] DAL.DataBase.EndTransaction Commit |
+367|2017-05-01 15:09:01|[7] DAL.DataBase.BeginTransaction. |
+368|2017-05-01 15:09:01|[7] DAL.RecordsDB.NonQuerySQL|DELETE FROM Posts WHERE Id = 1
+369|2017-05-01 15:09:01|[7] DAL.DataBase.EndTransaction Commit |
+370|2017-05-01 15:09:01|[10] DAL.DataBase.BeginTransaction. |
+371|2017-05-01 15:09:01|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+372|2017-05-01 15:09:01|[10] DAL.DataBase.EndTransaction Commit |
+373|2017-05-01 15:09:13|[7] DAL.DataBase.BeginTransaction. |
+374|2017-05-01 15:09:13|[7] DAL.RecordsDB.NonQuerySQL|INSERT INTO Posts(Sender, CreationDate, Title, Content) VALUES ('Liam', '2017-05-01 15:09:02.000', 'FIRST', 'IM FIRST HAHA SUCK IT!')
+375|2017-05-01 15:09:13|[7] DAL.RecordsDB.QuerySQL |SELECT TOP 1 * FROM Posts ORDER BY ID DESC
+376|2017-05-01 15:09:13|[7] DAL.DataBase.EndTransaction Commit |
+377|2017-05-01 15:09:13|[10] DAL.DataBase.BeginTransaction. |
+378|2017-05-01 15:09:13|[10] DAL.RecordsDB.QuerySQL |SELECT * FROM POSTS ORDER BY CreationDate DESC
+379|2017-05-01 15:09:13|[10] DAL.DataBase.EndTransaction Commit |

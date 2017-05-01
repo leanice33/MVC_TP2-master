@@ -36,6 +36,7 @@ namespace DAL_Demo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
             DB.Initialize(Server.MapPath(@"~\App_Data\MainDB.mdf"), 
                           Server.MapPath(@"~\App_Data\SQL_Journal.txt"));
         }
